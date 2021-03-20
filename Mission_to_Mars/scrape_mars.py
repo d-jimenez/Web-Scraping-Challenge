@@ -124,7 +124,7 @@ def scrape():
         html = browser.html
         # soup_2 = BeautifulSoup(html, 'html.parser')
 
-        img_url=browser.find_by_text('Original')['href']
+        img_url=browser.find_by_text('Sample')['href']
         
         hemisphere_dict={
             "title": title,
