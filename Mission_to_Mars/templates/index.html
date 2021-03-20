@@ -13,8 +13,40 @@
   <div class="container">
 
     <div class="jumbotron text-center">
-      <!-- Render our data -->
-      <h1>{{ text }}</h1>
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Latest Data</a></p>
+    </div>
+
+    <div class="row" id="MarsArticles">
+      <div class="col-md-12">
+        <h2 class="heading">Latest Mars News</h2>
+      </div>
+
+      <div class="col-md-12">
+        {% for item in jinja_list %}
+        <h3> {{item["Title"]}}</h3>
+        {% endfor %}
+      </div>
+
+      <div class="col-md-12">
+        {% for item in jinja_list %}
+        <p> {{item["Paragraph"]}}</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="row" id="MarsArticles">
+
+      <div class="col-md-8">
+        <h2 class="heading">Featured Mars Image</h2>
+        
+        <a>
+          rsc={% for item in jinja_list %}
+          <img src="{[item['FeaturedImage']}}" alt="Mars Featured Image"> </img>
+          {% endfor %} 
+        </a>
+        
+      </div>
     </div>
 
   </div>

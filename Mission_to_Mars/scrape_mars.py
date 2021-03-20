@@ -8,7 +8,7 @@ import os
 
 
 def init_browser():
-    # @NOTE: Replace the path with your actual path to the chromedriver
+    # NOTE: Replace the path with your actual path to the chromedriver
     executable_path = {'executable_path': ChromeDriverManager().install()}
     return Browser('chrome', **executable_path, headless=False)
 
@@ -139,12 +139,12 @@ def scrape():
 
     browser.quit()
 
-    nasa_scrape_dict={
+    mars_dict={
         "Title":news_title,
         "Paragraph":news_p,
-        "Featured Image": featured_image_url,
-        "Mars Facts": mars_facts_html,
-        "Hemisphere Images": hemisphere_image_urls
+        "FeaturedImage": featured_image_url,
+        "MarsFacts": mars_facts_html,
+        "HemisphereImages": hemisphere_image_urls
     }
 
-    return nasa_scrape_dict
+    return mars_dict
