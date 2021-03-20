@@ -1,0 +1,26 @@
+.hemispheres img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+table.datatable {
+    width: 100%;
+    padding-top: 5px;
+}
+table.datatable{
+    border: 1px solid black;
+}
+  
+table.datatable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.datatable thead {
+    text-align: center;
+    font-weight:bold;
+}
+
+.datatable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
