@@ -50,7 +50,7 @@
 
       <div class="col-md-6">
         <h2 class="heading">Mars Facts</h2>
-        <table class="datatable">
+        <table class="table">
           {% for item in jinja_list %}
           {{item['MarsFacts']|safe}}
           {% endfor %} 
@@ -66,62 +66,62 @@
       </div>
   
       <div class="row">
-        <div class="col-md-6">
-          <h4>
-            {% for item in jinja_list %}
-            {{item['HemisphereImages'][0]['title']}}
-            {% endfor %} 
-          </h4>
+        <div class="col-md-6 box"> 
           <a>
             {% for item in jinja_list %}
             <img src="{{item['HemisphereImages'][0]['img_url']}}" alt="Cerberus Hemisphere Enhanced"> </img>
             {% endfor %} 
           </a>
-        </div>
-        
-        <div class="col-md-6">
-          <h4>
+          <h4 class="img_title">
             {% for item in jinja_list %}
-            {{item['HemisphereImages'][1]['title']}}
+            {{item['HemisphereImages'][0]['title']}}
             {% endfor %} 
           </h4>
-
+        </div>
+        
+        <div class="col-md-6 box">
           <a>
             {% for item in jinja_list %}
             <img src="{{item['HemisphereImages'][1]['img_url']}}" alt="Schiaparelli Hemisphere Enhanced"> </img>
             {% endfor %} 
           </a>
+          <h4 class="img_title">
+            {% for item in jinja_list %}
+            {{item['HemisphereImages'][1]['title']}}
+            {% endfor %} 
+          </h4>
         </div>
       </div>
   
       <div class="row">
-        <div class="col-md-6">
-          <h4>
-            {% for item in jinja_list %}
-            {{item['HemisphereImages'][2]['title']}}
-            {% endfor %} 
-          </h4>
-
+        <div class="col-md-6 box">
+    
           <a>
             {% for item in jinja_list %}
             <img src="{{item['HemisphereImages'][2]['img_url']}}" alt="Syrtis Major Hemisphere Enhanced"> </img>
             {% endfor %} 
           </a>
-        </div>
-  
-        <div class="col-md-6">
 
-          <h4>
+          <h4 class="img_title">
             {% for item in jinja_list %}
-            {{item['HemisphereImages'][3]['title']}}
+            {{item['HemisphereImages'][2]['title']}}
             {% endfor %} 
           </h4>
 
+        </div>
+  
+        <div class="col-md-6 box">
           <a>
             {% for item in jinja_list %}
             <img src="{{item['HemisphereImages'][3]['img_url']}}" alt="Valles Marineris Hemisphere Enhanced"> </img>
             {% endfor %} 
           </a>
+
+          <h4 class="img_title">
+            {% for item in jinja_list %}
+            {{item['HemisphereImages'][3]['title']}}
+            {% endfor %} 
+          </h4>
         </div>
       </div>
     </div>
